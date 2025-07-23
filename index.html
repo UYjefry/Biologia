@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cuidado en las Redes</title>
 
   <!-- Estilos CSS -->
@@ -21,12 +21,12 @@
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f7fa;
-      color: #333;
+      background-color: #0d1b2a;
+      color: #f1f1f1;
     }
     header {
-      background-color: #005f73;
-      color: white;
+      background-color: #1b263b;
+      color: #f1f1f1;
       padding: 20px;
       text-align: center;
     }
@@ -40,15 +40,19 @@
     }
     h1, h2 {
       margin-bottom: 10px;
+      color: #ff6b6b;
     }
     footer {
-      background-color: #005f73;
-      color: white;
+      background-color: #1b263b;
+      color: #f1f1f1;
       text-align: center;
       padding: 15px;
       position: fixed;
       width: 100%;
       bottom: 0;
+    }
+    ul li::marker {
+      color: #ff6b6b;
     }
   </style>
 
@@ -57,10 +61,10 @@
 </head>
 <body>
 
-  <!-- Contenedor del efecto de partículas -->
+  <!-- Contenedor del efecto -->
   <div id="tsparticles"></div>
 
-  <!-- Contenido de tu sitio -->
+  <!-- Contenido principal -->
   <header>
     <h1>Cuidado en las Redes</h1>
     <p>Uso responsable y consciente del entorno digital</p>
@@ -69,57 +73,68 @@
   <main>
     <section>
       <h2>¿Por qué es importante?</h2>
-      <p>[Aquí puedes agregar una explicación sobre los riesgos y responsabilidades al usar redes sociales]</p>
+      <p>Las redes sociales pueden exponer nuestra información personal si no somos cuidadosos. Además, hay riesgos como el ciberacoso, estafas y manipulación de datos.</p>
     </section>
 
     <section>
       <h2>Consejos clave</h2>
       <ul>
-        <li>[Ejemplo: No compartas información personal con desconocidos]</li>
-        <li>[Ejemplo: Configura bien la privacidad de tus cuentas]</li>
-        <li>[Ejemplo: Piensa antes de publicar]</li>
+        <li>No compartas información personal con desconocidos.</li>
+        <li>Configurá bien la privacidad de tus cuentas.</li>
+        <li>Verificá la fuente antes de compartir información.</li>
+        <li>Reportá contenido ofensivo o sospechoso.</li>
       </ul>
     </section>
 
-    <!-- Repetidos: podés cambiar los títulos para evitar duplicados -->
     <section>
       <h2>Educación digital</h2>
-      <p>[Agrega contenido educativo sobre cómo usar las redes de forma segura]</p>
+      <p>Comprender cómo funcionan las plataformas y sus políticas ayuda a proteger tu identidad digital y prevenir riesgos.</p>
     </section>
 
     <section>
       <h2>Privacidad en línea</h2>
-      <p>[Importancia de proteger tus datos personales y contraseñas]</p>
+      <p>Usá contraseñas seguras, evitá usar WiFi públicas sin protección, y revisá permisos de apps que instalás.</p>
     </section>
 
     <section>
       <h2>Ciberacoso</h2>
-      <p>[Cómo identificar y actuar frente al acoso en redes]</p>
+      <p>Si sufrís acoso, no respondas, guardá pruebas y bloqueá al agresor. Pedí ayuda a un adulto o profesional.</p>
     </section>
 
     <section>
       <h2>Huella digital</h2>
-      <p>[Cómo todo lo que publicamos queda registrado]</p>
+      <p>Todo lo que publicás deja una marca. Pensá antes de publicar y revisá lo que otros etiquetan de vos.</p>
     </section>
 
     <section>
       <h2>Conclusión</h2>
-      <p>[Resumen de la importancia de mantener un comportamiento responsable y seguro en redes digitales]</p>
+      <p>El uso responsable de las redes protege tu seguridad, tu reputación y tu bienestar emocional.</p>
     </section>
   </main>
 
-  <!-- Script para configurar el efecto -->
+  <!-- Partículas efecto galaxia -->
   <script>
     tsParticles.load("tsparticles", {
       fullScreen: { enable: false },
+      background: { color: "transparent" },
       particles: {
-        number: { value: 80 },
-        size: { value: 3 },
-        move: { enable: true, speed: 1 },
-        color: { value: "#ffffff" },
-        links: { enable: true, color: "#ffffff" }
-      },
-      background: { color: "transparent" }
+        number: { value: 90 },
+        size: { value: { min: 1, max: 3 } },
+        color: { value: ["#00d1ff", "#ff00c3", "#ffffff"] },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          outModes: "out"
+        },
+        opacity: { value: 0.7 },
+        links: {
+          enable: true,
+          distance: 120,
+          color: "#ffffff",
+          opacity: 0.2
+        }
+      }
     });
   </script>
 
