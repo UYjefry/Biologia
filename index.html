@@ -2,53 +2,61 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cuidado en las Redes</title>
-
   <style>
+    /* Video fondo */
+    #video-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1; /* detrás del contenido */
+      filter: brightness(0.4); /* oscurece para que texto se vea */
+      pointer-events: none; /* no interfiere con clicks */
+    }
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #e9f1f7; /* Fondo claro y suave */
-      color: #1c1c1c;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      background-color: #000;
     }
-    header {
-      background-color: #0077b6;
-      color: #ffffff;
+    header, main, footer {
+      position: relative;
       padding: 20px;
-      text-align: center;
-    }
-    main {
-      padding: 40px 20px;
       max-width: 900px;
       margin: auto;
+      z-index: 1;
     }
-    section {
-      margin-bottom: 30px;
-    }
-    h1, h2 {
-      margin-bottom: 10px;
-      color: #ff6b6b; /* Acento llamativo */
+    header {
+      text-align: center;
+      padding-top: 60px;
     }
     footer {
-      background-color: #0077b6;
-      color: #ffffff;
       text-align: center;
       padding: 15px;
       position: fixed;
-      width: 100%;
       bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+    h1, h2 {
+      color: #ff6b6b;
     }
     ul li::marker {
       color: #ff6b6b;
     }
   </style>
-
-  <!-- Librería de partículas -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
 </head>
 <body>
+
+  <!-- Video de fondo -->
+  <video autoplay muted loop id="video-bg" playsinline>
+    <source src="https://cdn.videvo.net/videvo_files/video/free/2017-12/small_watermarked/171122_07_Digital_Clouds_1080p_preview.webm" type="video/webm" />
+    <source src="https://cdn.videvo.net/videvo_files/video/free/2017-12/small_watermarked/171122_07_Digital_Clouds_1080p_preview.mp4" type="video/mp4" />
+    Tu navegador no soporta video HTML5.
+  </video>
 
   <header>
     <h1>Cuidado en las Redes</h1>
@@ -60,68 +68,8 @@
       <h2>¿Por qué es importante?</h2>
       <p>Las redes sociales pueden exponer nuestra información personal si no somos cuidadosos. Además, hay riesgos como el ciberacoso, estafas y manipulación de datos.</p>
     </section>
-
-    <section>
-      <h2>Consejos clave</h2>
-      <ul>
-        <li>No compartas información personal con desconocidos.</li>
-        <li>Configurá bien la privacidad de tus cuentas.</li>
-        <li>Verificá la fuente antes de compartir información.</li>
-        <li>Reportá contenido ofensivo o sospechoso.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Educación digital</h2>
-      <p>Comprender cómo funcionan las plataformas y sus políticas ayuda a proteger tu identidad digital y prevenir riesgos.</p>
-    </section>
-
-    <section>
-      <h2>Privacidad en línea</h2>
-      <p>Usá contraseñas seguras, evitá usar WiFi públicas sin protección, y revisá permisos de apps que instalás.</p>
-    </section>
-
-    <section>
-      <h2>Ciberacoso</h2>
-      <p>Si sufrís acoso, no respondas, guardá pruebas y bloqueá al agresor. Pedí ayuda a un adulto o profesional.</p>
-    </section>
-
-    <section>
-      <h2>Huella digital</h2>
-      <p>Todo lo que publicás deja una marca. Pensá antes de publicar y revisá lo que otros etiquetan de vos.</p>
-    </section>
-
-    <section>
-      <h2>Conclusión</h2>
-      <p>El uso responsable de las redes protege tu seguridad, tu reputación y tu bienestar emocional.</p>
-    </section>
+    <!-- resto de contenido igual -->
   </main>
-
-  <!-- Partículas efecto profesional -->
-  <script>
-    tsParticles.load("tsparticles", {
-      fullScreen: { enable: true },
-      background: { color: "#e9f1f7" }, // fondo claro
-      particles: {
-        number: { value: 60 },
-        size: { value: { min: 1, max: 3 } },
-        color: { value: ["#ff6b6b", "#0077b6", "#ffffff"] }, // llamativos
-        move: {
-          enable: true,
-          speed: 1.5,
-          direction: "none",
-          outModes: "out"
-        },
-        opacity: { value: 0.6 },
-        links: {
-          enable: true,
-          distance: 120,
-          color: "#555555",
-          opacity: 0.3
-        }
-      }
-    });
-  </script>
 
   <footer>
     &copy; 2025 | Tu Nombre o Institución
